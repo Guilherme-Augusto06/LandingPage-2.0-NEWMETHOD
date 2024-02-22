@@ -1,0 +1,123 @@
+{% include "indexOrigin.html" %}
+
+<body>
+{% include "navbar.html" %}
+
+<div class="compras">
+    <div class="compra">
+        <div class="rtx4090class">
+        <img src="{{url_for('static', filename='./img/water-cooler-corsair-h150-rgb-intel-amd-360mm-3x-120mm-preto-cw-9060054-ww_1636559276_gg.jpg')}}" alt="">
+        </div>
+        <h3 id="nome">Water Cooler Corsair H150 RGB</h3>
+        <p id="descricao">360mm / Intel/AMD / Preto - CW-9060054-WW</p>
+        <p id="valor">R$ 699</p>
+        <div class="botao-comprar">
+            <button id="comprar_apple_vision">Adicionar</button>
+            <a href="./index2/watercoller.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+    <div class="compra">
+        <div class="teclado">
+        <img src="{{url_for('static', filename='./img/monitor.jpg')}}" alt="">
+        </div>
+        <h3 id="nome">Samsung C34G55TWWL Odyssey 34' - Monitor Gamer Curvo</h3>
+        <p id="descricao">WQHD / 165Hz / 1ms / tela ultrawide / HDMI / Display Port / Freesync Premium / preto / série G5</p>
+        <p id="valor">R$ 2999</p>
+        <div class="botao-comprar">
+            <button id="comprar_iphone">Adicionar</button>
+            <a href="./index2/monitor.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+    <div class="compra">
+        <div class="foneclass">
+        <img src="{{url_for('static', filename='./img/controleps5.jpg')}}" alt="">
+        </div>
+        <h3 id="nome">Controle DualSense</h3>
+        <p id="descricao">Branco</p>
+        <p id="valor">R$ 376</p>
+        <div class="botao-comprar">
+            <button id="comprar_headset">Adicionar</button>
+            <a href="./index2/controleps5.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+    <div class="compra">
+        <div class="celularclass">
+        <img src=".{{url_for('static', filename='./img/PS5.jpg')}} " alt="">
+        </div>
+        <h3 id="nome">Console PlayStation®5</h3>
+        <p id="descricao">Mídia digital</p>
+        <p id="valor">R$ 4050</p>
+        <div class="botao-comprar">
+            <button id = "comprar_celular">Adicionar</button>
+            <a href="./index2/ps5.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+    <div class="compra">
+        <div class="alexaclass">
+        <img src="{{url_for('static', filename='./img/XBOX.jpg')}}" alt="">
+        </div>
+        <h3 id="nome">Console Xbox Series X</h3>
+        <p id="descricao">Edição Premium / Microsoft - RRT-00057</p>
+        <p id="valor">R$ 4970</p>
+        <div class="botao-comprar">
+            <button id="comprar_alexa">Adicionar</button>
+            <a href="./index2/xbox.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+    <div class="compra">
+        <div class="mouse">
+        <img src="{{url_for('static', filename='./img/controlexbox.jpg')}}" alt="">
+        </div>
+        <h3 id="nome">Controle sem Fio Xbox</h3>
+        <p id="descricao">Carbon Black</p>
+        <p id="valor">R$ 419</p>
+        <div class="botao-comprar">
+            <button id="comprar_mouse">Adicionar</button>
+            <a href="./index2/controlexbox.html" class="arrow-button"><span class="material-symbols-outlined">
+                zoom_out_map
+            </span></a>
+        </div>
+    </div>
+
+</div>
+    <div class="next-page">
+        <a href="homepage.html" class="arrow-button"><span class="material-symbols-outlined">
+            arrow_back_ios
+            </span></a>
+        <p>2/2</p>
+        <a href="#" class="arrow-button"><span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span></a>
+    </div>
+    
+    {% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">  
+
+    </script>
+</body>
+</html>

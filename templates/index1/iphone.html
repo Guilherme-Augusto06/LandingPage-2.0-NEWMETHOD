@@ -1,0 +1,61 @@
+{% include "indexOrigin.html" %}
+<body>
+
+
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../homepage.html"; 
+        });
+    </script>
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/iphone.jpeg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">iPhone 15</h3>
+            <p id="descricao">iPhone 15</p>
+            <p>O iPhone 15 é o ápice da inovação da Apple em termos de smartphones.</p> 
+            <p>Com uma tela Super Retina XDR de 6,7 polegadas, o chip A14 Bionic, sistema </p>
+            <p>de câmera Pro e suporte a 5G, ele oferece um desempenho extraordinário em todos os aspectos. </p>
+            <p>Este modelo possui 256GB de armazenamento, permitindo que você armazene uma </p>
+            <p>grande quantidade de fotos, vídeos, aplicativos e muito mais.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 6999</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+   
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script 
+src="{{url_for('static', filename='./js/main.js')}}">  
+
+</script>
+</body>
+</html>

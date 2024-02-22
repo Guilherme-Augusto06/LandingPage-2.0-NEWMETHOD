@@ -1,0 +1,12 @@
+.rodape {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.rodape img{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    
+}

@@ -1,0 +1,23 @@
+{% include "indexOrigin.html" %}
+<body>
+    {% include "navbar.html" %}
+
+    <form class="form99">
+        <h2 class="h299">Entre em Contato</h2>
+        <p class="p99" type="Nome:"><input class="input99" placeholder="Seu Nome "></input></p>
+        <p class="p99" type="Email:"><input class="input99" placeholder="@gmail.com"></input></p>
+        <p class="p99" type="Como podemos te Ajudar?:"><input class="input99" placeholder="Escreva Aqui"></input></p>
+  
+        <div class="div99">
+          <span class="fa fa-phone fa99"></span>(11)99123456
+          <span class="fa fa-envelope-o fa99"></span> TechTopia@gmail.com
+        </div>
+    </form>
+      <script 
+      src="{{url_for('static', filename='./js/main.js')}}">  
+  
+      </script>
+
+    {% include "footer.html" %}
+</body>
+</html>

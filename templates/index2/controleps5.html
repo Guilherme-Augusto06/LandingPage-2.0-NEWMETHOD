@@ -1,0 +1,58 @@
+{% include "indexOrigin.html" %}
+<body>
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../secondPage.html"; 
+        });
+    </script>
+
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/controleps5.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Controle</h3>
+            <p id="descricao">Controle DualSense PS5</p>
+            <p>As capas para controle analógico, os botões de comandos e as configurações são altamente personalizáveis.</p> 
+            <p>Afine sua mira ajustando a sensibilidade do controle analógico e as áreas neutras.</p>
+            <p>Os botões traseiros podem ser configurados para qualquer outro comando de botão,</p>
+            <p>garantindo que você tenha sempre ações importantes e controles essenciais ao seu alcance.</p>
+            <p>Mantenha seu controle sem fio DualSense Edge™ e seus componentes bem organizados no estojo incluso.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 376</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">  
+
+    </script>
+</body>
+</html>

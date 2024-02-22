@@ -1,0 +1,61 @@
+{% include "indexOrigin.html" %}
+<body>
+
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../homepage.html"; 
+
+        });
+    </script>
+
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/fone.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Headset Gamer Razer Kraken</h3>
+            <p id="descricao">Multi Platform Green P2 - Verde - RZ.AU.KR.03.RT</p>
+            <p>Experimente a adrenalina de mergulhar na cena de outra maneira! </p>
+            <p>Ter fones de ouvido específicos para jogos muda completamente sua experiência. </p>
+            <p>Com os Razer Kraken, você não perde nenhum detalhe e ouve o áudio como ele foi pensado pelos criadores.</p>
+            <p>O formato perfeito para você, o desenho over-ear oferece um conforto incomparável graças às suas almofadas. </p>
+            <p>Ao mesmo tempo, seu som surround do mais alto nível se torna o protagonista da cena.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 699,99</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}    
+
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script 
+src="{{url_for('static', filename='./js/main.js')}}">  
+
+</script>
+</body>
+</html>

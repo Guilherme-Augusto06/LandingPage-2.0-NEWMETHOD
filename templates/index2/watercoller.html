@@ -1,0 +1,58 @@
+{% include "indexOrigin.html" %}
+<body>
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../secondPage.html"; 
+        });
+    </script>
+
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/water-cooler-corsair-h150-rgb-intel-amd-360mm-3x-120mm-preto-cw-9060054-ww_1636559276_gg.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Cooler</h3>
+            <p id="descricao">PWater Cooler Corsair H150 RGB</p>
+            <p>O cooler líquido multifuncional para CPU CORSAIR H150 RGB oferece um resfriamento poderoso e confiável.</p> 
+            <p>Resfriamento completo para CPU que ilumina seu PC com cores dramáticas graças a ventoinhas de </p>
+            <p>120mm CORSAIR SP RGB ELITE PWM, gerando um excelente fluxo de ar e cores RGB vibrantes.</p>
+            <p>Controle conveniente da iluminação usando placas-mãe compatíveis.</p>
+            <p>Equipado com uma placa fria de cobre termicamente otimizada e bomba de baixo ruído para um resfriamento silencioso.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 699</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">  
+
+    </script>
+</body>
+</html>

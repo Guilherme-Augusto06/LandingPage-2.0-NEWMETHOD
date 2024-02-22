@@ -1,0 +1,163 @@
+body {
+    background: #fafafa;
+}
+.faqzao {
+    display: flex;
+    flex-direction: column;
+    font-family: "Sora", sans-serif;
+    max-width: 870px;
+    min-width: 320px;
+    margin: 50px auto;
+    padding: 0 50px;
+}
+.faqzao h1 {
+    font-size: 32px;
+    text-align: center;
+}
+.faqzao-item {
+    margin-top: 16px;
+    border: 1px solid #fcfcfc;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.faqzao-item .faqzao-item-titulo {
+
+    position: relative;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.faqzao-item .faqzao-item-descricao {
+    display: none;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #444;
+    border-top: 1px dashed #ddd;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+}
+.faqzao-item input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.faqzao-item input[type="checkbox"]:checked ~ .faqzao-item-descricao {
+    display: block;
+}
+.faqzao-item input[type="checkbox"]:checked ~ .faqzao-item-titulo .icon:after {
+    content: "-";
+    font-size: 20px;
+}
+.faqzao-item input[type="checkbox"] ~ .faqzao-item-titulo .icon:after {
+    content: "+";
+    font-size: 20px;
+}
+.faqzao-item:first-child {
+    margin-top: 0;
+}
+.faqzao-item .icon {
+    margin-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+    .faqzao {
+        padding: 0 16px;
+    }
+    .faqzao h1 {
+        font-size: 22px;
+    }
+}
+
+.barra-topo {
+    background-color: #b700ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.faqzao {
+    margin-top: 20px;
+}
+
+.titulo-faq {
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.caixa-texto {
+    background-color: #15027e42;;
+    display: flex;
+    flex-direction: column;
+    font-family: "Sora", sans-serif;
+    max-width: 690px;
+    min-width: 220px;
+    margin: 50px auto;
+    padding: 0 50px;
+    min-height: 300px; 
+    border-radius: 30px;
+}
+
+.h1fale {
+    font-size: 13px;
+    font-family: 'Space Grotesk', sans-serif;
+    align-self: center;
+}
+
+.h2fale {
+    font-size: 8px;
+    align-self: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.caixa-pergunta {
+    background-color: #ddd; 
+    border-radius: 25px;
+    font-family: "Montserrat Alternates", sans-serif; 
+    padding: 10px;
+    width: 200px; 
+    margin: 20px auto; 
+}
+
+
+.caixa-texto2 {
+    background-color: #0002943b;
+    display: flex;
+    flex-direction: column;
+    font-family: "Sora", sans-serif;
+    max-width: 690px;
+    min-width: 320px;
+    margin: 50px auto;
+    padding: 0 50px;
+    min-height: 120px; 
+    border-radius: 30px;
+}
+
+.contatoh1 {
+    font-family: 'Space Grotesk', sans-serif;
+    align-self: center;
+    font-size: 8px;
+}
+
+.contatoh2 {
+    font-size: 12px;
+    align-self: center;
+    font-family: 'Space Grotesk', sans-serif;
+}

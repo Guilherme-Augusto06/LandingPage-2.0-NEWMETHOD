@@ -1,0 +1,58 @@
+{% include "indexOrigin.html" %}
+<body>
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../secondPage.html"; 
+        });
+    </script>
+
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/XBOX.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Console Xbox</h3>
+            <p id="descricao">Console Xbox Series X</p>
+            <p>Resolução de 7680px x 4320px.</p> 
+            <p>Memória RAM de 16GB.</p>
+            <p>Conta com: 1 cabo hdmi.</p>
+            <p>Esta geração de consoles se destaca no mercado pela sua potência e alto desempenho.</p>
+            <p>A duração da bateria dos controles depende de como o produto é usado.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 4970</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">  
+
+    </script>
+</body>
+</html>

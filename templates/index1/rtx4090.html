@@ -1,0 +1,57 @@
+{% include "indexOrigin.html" %}
+<body>
+
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../homepage.html"; 
+        });
+    </script>
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/rtx4090.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Placa de Vídeo</h3>
+            <p id="descricao">GEFORCE RTX 4090 TUF GAMING</p>
+            <p>A série rtx 4090 foi projetada com arquitetura mais aclamada da fabricante nvidia,</p> 
+            <p>ada lovelace com multiprocessadores que otimizam o mecanismo gráfico da placa.</p>
+            <p>A tecnologia shader execution reordering (ser) aprimora a taxa de frames</p>
+            <p>juntamente com a tecnologia ray tracing, alocando e organizando blocos de pixels,</p>
+            <p>por meio de dados acessados do cache da memória detalhando todo o cenário e transformando em imagens hiper-realistas.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 12200</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script 
+src="{{url_for('static', filename='./js/main.js')}}">  
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% include "indexOrigin.html" %}
+<body>
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../secondPage.html"; 
+        });
+    </script>
+
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/monitor.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Monitor</h3>
+            <p id="descricao">Samsung C34G55TWWL Odyssey 34' - Monitor Gamer Curvo</p>
+            <p>O Monitor Gamer Curvo Samsung Odyssey 34" WQHD Série G5 possui gráficos que ultrapassam os limites.</p> 
+            <p>A resolução Ultra-WQHD proporciona uma visão vasta e abrangente do mundo dos seus jogos com detalhes verdadeiramente realistas.</p>
+            <p>O amplo tamanho da tela oferece pura imersão, eliminando a distração de bordas no meio e cabos bagunçados de um setup com dois monitores.</p>
+            <p>Ele conta com várias gamas de cores através da tecnologia HDR10 dá vida às cenas dos seus jogos de forma mais vibrante do que nunca.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 2999</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">
+
+    </script>
+</body>
+</html>

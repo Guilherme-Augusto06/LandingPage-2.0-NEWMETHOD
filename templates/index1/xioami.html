@@ -1,0 +1,56 @@
+{% include "indexOrigin.html" %}
+<body>
+
+    <button class="botao-voltar"id="botaoRetornar">Voltar</button>
+    <script>
+        document.getElementById("botaoRetornar").addEventListener("click", function() {
+            window.location.href = "../homepage.html"; 
+        });
+    </script>
+<div class="compras-zoom">
+    <div class="compra-zoom">
+        <div class="iphone-zoom">
+            <div class="product-image-zoom">
+                <img src="{{url_for('static', filename='./img/celular.jpg')}}" alt="">
+            </div>
+            <div class="purple-border"></div>
+        </div>
+        <div class="descricao-compra">
+            <h3 id="nome">Smartphone Xiaomi Poco F5 Pro</h3>
+            <p id="descricao">Dual Sim De 512gb / 12gb Ram De 6.67 Tela- Preto (global)</p>
+            <p>Fotografia profissional no seu bolso</p>
+            <p>Descubra infinitas possibilidades para suas fotos com as 3 câmeras principais de sua equipe. </p>
+            <p>Teste sua criatividade e jogue com iluminação, diferentes planos e efeitos para obter ótimos resultados.</p>
+            <br> <!-- Adicionando a quebra de linha aqui -->
+            <p id="valor">R$ 3300</p>
+            <div class="botao-comprar3">
+                <div class="botoes-compra1">
+                    <button id="comprar_iphone">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% include "footer.html" %}
+    <!-- Modal Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="fecharModalCarrinho">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div class="modal-body" id="listaProdutosCarrinho">
+                <!-- Aqui serão listados os itens do carrinho -->
+            </div>
+        </div>
+    </div>
+    
+      
+    
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script 
+src="{{url_for('static', filename='./js/main.js')}}">  
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% include "indexOrigin.html" %}
+<body>
+    {% include "navbar.html" %}
+    
+    <div class="faqzao">
+        <h1 class="titulo-faq">Como Podemos <br> Ajudar ?</h1>
+        <div class="faqzao-item">
+            <input type="checkbox" id="faqzao1">
+            <label for="faqzao1" class="faqzao-item-titulo"><span class="icon"></span>Como faço para realizar uma compra?</label>
+            <div class="faqzao-item-descricao">Navegue pelo site, escolha os produtos desejados, adicione ao carrinho e siga o processo de checkout.</div>
+        </div>
+    
+        <div class="faqzao-item">
+            <input type="checkbox" id="faqzao2">
+            <label for="faqzao2" class="faqzao-item-titulo"><span class="icon"></span>Quais formas de pagamento são aceitas?</label>
+            <div class="faqzao-item-descricao">Aceitamos diversas formas de pagamento, incluindo cartão de crédito, boleto bancário e transferência.</div>
+        </div>
+
+        <div class="faqzao-item">
+            <input type="checkbox" id="faqzao3">
+            <label for="faqzao3" class="faqzao-item-titulo"><span class="icon"></span>Qual é o prazo de entrega?</label>
+            <div class="faqzao-item-descricao">O prazo de entrega varia de acordo com a localidade. Você pode consultar estimativas na página do produto ou durante o checkout.</div>
+        </div>
+
+        <div class="faqzao-item">
+            <input type="checkbox" id="faqzao4">
+            <label for="faqzao4" class="faqzao-item-titulo"><span class="icon"></span>Posso acompanhar o status do meu pedido?</label>
+            <div class="faqzao-item-descricao">Sim, após a confirmação do pagamento, você receberá um código de rastreamento para acompanhar a entrega.</div>
+        </div>
+
+        <div class="faqzao-item">
+            <input type="checkbox" id="faqzao5">
+            <label for="faqzao5" class="faqzao-item-titulo"><span class="icon"></span>Como posso devolver um produto?</label>
+            <div class="faqzao-item-descricao">Em casos de devolução, entre em contato conosco. Consulte nossa política de devolução para obter mais informações.</div>
+        </div>
+    </div>
+    <div class="caixa-texto">
+        <div class="h1fale">
+            <h1>Sua Duvida não está ai?</h1>
+        </div>
+        <div class="h2fale">
+            <h2>Fale Conosco!</h2>
+        </div>
+        <form>
+            <div class="caixa-pergunta">
+                <input type="text" placeholder="Escreva Aqui sua Pergunta">
+            </div>
+        </form>
+    </div>
+
+    <div class="caixa-texto2">
+        <div class="contatoh1">
+            <h1>Entre em contato com nós</h1>
+        </div>
+        <div class="contatoh2">
+            <a href="contato.html">Clique aqui para visitar a aba de contatos</a>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script 
+    src="{{url_for('static', filename='./js/main.js')}}">  
+    </script>
+    {% include "footer.html" %}
+</body>
+</html>
